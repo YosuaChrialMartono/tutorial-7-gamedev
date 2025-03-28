@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b84wr3ax3hcsm"]
+
+[ext_resource type="Texture2D" uid="uid://cxkmwk6kovf3" path="res://assets/Keanu.png" id="1_t8jyt"]
+
+[node name="WinScreen" type="TextureRect"]
+texture = ExtResource("1_t8jyt")

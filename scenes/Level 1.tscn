@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://d2uhiygwqcw5"]
+
+[ext_resource type="PackedScene" uid="uid://vqb6wp4brt26" path="res://scenes/Player.tscn" id="1_djbbh"]
+[ext_resource type="PackedScene" uid="uid://cqigxpir5fynb" path="res://scenes/World 1.tscn" id="2_pf603"]
+[ext_resource type="PackedScene" uid="uid://df2e6spybkfls" path="res://scenes/WinArea.tscn" id="3_vgvqy"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_djbbh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.694029, -0.716882)
+
+[node name="World 1" parent="." instance=ExtResource("2_pf603")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.95688, -2.14186)
+light_energy = 12.315
+light_size = 2.515
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.41876, 2.95688, -4.14186)
+light_energy = 9.887
+light_size = 2.515
+
+[node name="WinArea" parent="." instance=ExtResource("3_vgvqy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0116, 0, -3.6039)
+sceneName = "Win Screen"
+
+[node name="WinArea2" parent="." instance=ExtResource("3_vgvqy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94412, -2.86319, -0.603897)
