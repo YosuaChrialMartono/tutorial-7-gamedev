@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://cb25nd1jgdef1"]
+
+[ext_resource type="PackedScene" uid="uid://vqb6wp4brt26" path="res://scenes/Player.tscn" id="1_gxwr0"]
+[ext_resource type="PackedScene" uid="uid://baetdj26lt61l" path="res://scenes/world_2.tscn" id="2_0j705"]
+[ext_resource type="PackedScene" uid="uid://df2e6spybkfls" path="res://scenes/WinArea.tscn" id="3_6xftu"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7i4jg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0rayv"]
+albedo_color = Color(0.549765, 0.952788, 0.362302, 1)
+
+[node name="Level2" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_gxwr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0705566, 1.51619, 9.30256)
+
+[node name="World 2" parent="." instance=ExtResource("2_0j705")]
+
+[node name="WinArea" parent="." instance=ExtResource("3_6xftu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.82897, 6.08231, 11.5959)
+sceneName = "Win Screen"
+
+[node name="CSGMesh3D" parent="WinArea" index="1"]
+transform = Transform3D(-2.83284, 0, -3.3065e-05, 0, 1.73024, 0, 0.0291227, 0, -0.00321631, 0.235954, 0.0809584, 0)
+mesh = SubResource("CapsuleMesh_7i4jg")
+material = SubResource("StandardMaterial3D_0rayv")
+
+[node name="OmniLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 14.2194, 0)
+light_energy = 2.609
+light_angular_distance = 1.0
+
+[node name="OmniLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.151364, -0.988478, 0, 0.988478, 0.151364, 0, 14.2194, 0)
+light_energy = 1.963
+light_angular_distance = 1.0
+
+[node name="OmniLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.997633, -0.00622629, 0.0684816, 0, -0.995892, -0.0905458, 0.068764, 0.0903315, -0.993535, 21.7225, 14.2194, 0)
+light_energy = 1.155
+light_angular_distance = 1.0
+
+[editable path="WinArea"]

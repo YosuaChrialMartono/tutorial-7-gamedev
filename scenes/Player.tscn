@@ -8,6 +8,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_432ji"]
 
 [node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.936477, 0)
 script = ExtResource("1_l4oaw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

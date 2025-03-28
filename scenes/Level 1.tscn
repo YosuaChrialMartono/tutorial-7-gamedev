@@ -23,7 +23,7 @@ light_size = 2.515
 
 [node name="WinArea" parent="." instance=ExtResource("3_vgvqy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.0116, 0, -3.6039)
-sceneName = "Win Screen"
+sceneName = "Level 2"
 
 [node name="WinArea2" parent="." instance=ExtResource("3_vgvqy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.94412, -2.86319, -0.603897)

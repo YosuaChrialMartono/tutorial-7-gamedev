@@ -24,6 +24,21 @@ func _input(event):
 		var x_delta = event.relative.y * mouse_sensitivity
 		camera_x_rotation = clamp(camera_x_rotation + x_delta, -90.0, 90.0)
 		camera.rotation_degrees.x = -camera_x_rotation
+		
+	if Input.is_action_just_pressed("run"):
+		speed = speed * 2
+	
+	if Input.is_action_just_released("run"):
+		speed = speed / 2
+		
+	if Input.is_action_just_pressed("crouch"):
+		speed = speed * 0.4
+		camera.translate(Vector3(0,-0.5,0))
+		
+	
+	if Input.is_action_just_released("crouch"):
+		speed = speed / 0.4
+		camera.translate(Vector3(0,+0.5,0))
 
 func _physics_process(delta):
 	var movement_vector = Vector3.ZERO
